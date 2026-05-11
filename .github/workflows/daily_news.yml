@@ -3,6 +3,7 @@ name: Daily News
 on:
   schedule:
     - cron: '30 9 * * *'  # 06:30 Brasília time (UTC-3)
+  workflow_dispatch:   
  
 jobs:
   send:
