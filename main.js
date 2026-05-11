@@ -59,14 +59,14 @@ async function send_notices() {
     const notices = await getNewsItem()
     const job = await getjobsItem()
     const noticesText = notices
-        .map((item, i) => `${i + 1}. ${item.title}\n${item.url}`)
+        .map((item, i) => `${i + 1}. *_${item.title}_*\n${item.url}`)
         .join('\n\n')
 
     const jobsText = job
-        .map((item, i) => `${i + 1}. ${item.title}\n${item.url}`)
+        .map((item, i) => `${i + 1}. *_${item.title}_*\n${item.url}`)
         .join('\n\n')
 
-    const mensagem = `📰 Notices:\n\n${noticesText}\n\n🔍 Who is Hiring:\n\n${jobsText}`
+    const mensagem = `📰 *_Noties:_*\n\n*${noticesText}\n\n🔍 *Who is Hiring:*\n\n${jobsText}`
     const TOKEN = process.env.TOKEN
     const CHAT_ID = process.env.CHAT_ID
 
